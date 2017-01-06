@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1483713848 source:c:\users\wika\documents\c\dekorator_konkurs\main.cpp
+	<iostream>
+	<vector>
+	"KomponentWizualny.h"
+	"KomponentKonkretny.h"
+	"dekpoczkonzera.h"
+	"dekniep.h"
+
+1483713670 source:c:\users\wika\documents\c\dekorator_konkurs\src\komponentwizualny.cpp
+	"KomponentWizualny.h"
+	<iostream>
+	<vector>
+
+1483713670 c:\users\wika\documents\c\dekorator_konkurs\include\komponentwizualny.h
+
+1483712453 source:c:\users\wika\documents\c\dekorator_konkurs\src\dekorator.cpp
+	"Dekorator.h"
+
+1483708737 c:\users\wika\documents\c\dekorator_konkurs\include\dekorator.h
+	"KomponentWizualny.h"
+
+1483713694 source:c:\users\wika\documents\c\dekorator_konkurs\src\komponentkonkretny.cpp
+	"KomponentKonkretny.h"
+	<iostream>
+
+1483710000 c:\users\wika\documents\c\dekorator_konkurs\include\komponentkonkretny.h
+	"KomponentWizualny.h"
+	<vector>
+
+1483713848 source:c:\users\wika\documents\c\dekorator_konkurs\src\dekpoczkonzera.cpp
+	"dekpoczkonzera.h"
+	"KomponentKonkretny.h"
+
+1483699895 c:\users\wika\documents\c\dekorator_konkurs\include\dekpoczkonzera.h
+	"Dekorator.h"
+	"KomponentWizualny.h"
+
+1483713892 source:c:\users\wika\documents\c\dekorator_konkurs\src\dekniep.cpp
+	"dekniep.h"
+	"KomponentKonkretny.h"
+
+1483710395 c:\users\wika\documents\c\dekorator_konkurs\include\dekniep.h
+	"Dekorator.h"
+	"KomponentWizualny.h"
+
