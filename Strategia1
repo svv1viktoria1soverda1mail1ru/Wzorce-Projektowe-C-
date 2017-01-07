@@ -1,0 +1,125 @@
+#include <iostream>
+#include <string>
+using namespace std;
+ 
+class IPracowac {
+public:
+    virtual void pracuj()=0;
+};
+ 
+class IDojezdzac {
+public:
+    virtual void dojezdzaj()=0;
+};
+ 
+class ISpedzanieWolnegoCzasu {
+public:
+    virtual void spedzajWolnyCzas()=0;
+};
+ 
+ 
+//poszczegolne algorytmy
+class NaprawaSamochodow : public IPracowac {
+public:
+    void pracuj(){
+      cout<<"Praca: naprawia samochody\n";
+    }
+};
+ 
+class Leczenie : public IPracowac {
+public:
+    void pracuj(){
+      cout<<"Praca: leczy ludzi\n";
+    }
+};
+ 
+class RoznoszenieListow : public IPracowac {
+public:
+    void pracuj() {
+      cout<<"Praca: roznosi listy\n";
+    }
+};
+ 
+class Samochod : public IDojezdzac {
+public:
+    void dojezdzaj() {
+      cout<<"Dojazd: samochod\n";
+    }
+};
+ 
+class Rower : public IDojezdzac {
+public:
+    void dojezdzaj() {
+      cout<<"Dojazd: rower\n";
+    }
+};
+ 
+class Silownia : public ISpedzanieWolnegoCzasu {
+public:
+void spedzajWolnyCzas() {
+cout<<"Wolny Czas: silownia\n";
+}
+};
+ 
+class LiteraturaPopularnoNaukowa : public ISpedzanieWolnegoCzasu {
+public:
+void spedzajWolnyCzas() {
+cout<<"Wolny Czas: literatura popularno-naukowa\n";
+}
+};
+ 
+//kontekst
+class Pracownik {
+private:
+IPracowac* pracowac ;// = null;
+IDojezdzac* dojezdzac;// = null;
+ISpedzanieWolnegoCzasu* spedzanieWolnegoCzasu;// ;= null;
+ 
+public:
+Pracownik(string zawod) {
+if (zawod =="mechanik") {
+pracowac = new NaprawaSamochodow();
+dojezdzac = new Samochod();
+spedzanieWolnegoCzasu = new Silownia();
+}
+else if (zawod=="lekarz") {
+pracowac = new Leczenie();
+dojezdzac = new Samochod();
+spedzanieWolnegoCzasu = new LiteraturaPopularnoNaukowa();
+}
+else if (zawod=="listonosz") {
+pracowac = new RoznoszenieListow();
+dojezdzac = new Rower();
+spedzanieWolnegoCzasu = new Silownia();
+}
+else {
+throw "nie ma takiego zawodu!";
+}
+}
+ 
+//tutaj wywolujemy algorytmy
+void methods() {
+pracowac->pracuj();
+dojezdzac->dojezdzaj();
+spedzanieWolnegoCzasu->spedzajWolnyCzas();
+}
+};
+ 
+ 
+int main(){
+string zawod;
+cin>>zawod;
+int x;
+ 
+try {
+Pracownik pracownik = Pracownik(zawod);
+pracownik.methods();
+} catch(const char* wyjatek){
+cout << wyjatek << endl;
+cin >>x;
+}
+ 
+cin >>x;
+ 
+return 0;
+}
