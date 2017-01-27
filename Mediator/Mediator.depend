@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1485518317 source:c:\users\wika\documents\c\mediator\main.cpp
+	<iostream>
+	<string>
+	<iostream>
+	<vector>
+	<sstream>
+	<fstream>
+	<string>
+

@@ -1,0 +1,2 @@
+czesc;TXT;NUM;
+cos tam   pisze;ALFA;TXT;NUM;
